@@ -3,7 +3,7 @@ Practice DEFINING and CALLING
      FUNCTIONS
 
 Authors: David Mutchler, Dave Fisher, Valerie Galluzzi, Amanda Stouder,
-         their colleagues and PUT_YOUR_NAME_HERE.
+         their colleagues and Sydney Larson.
 """
 
 ########################################################################
@@ -23,7 +23,6 @@ Authors: David Mutchler, Dave Fisher, Valerie Galluzzi, Amanda Stouder,
 import rosegraphics as rg
 import random
 
-
 def main():
     """
     Makes a TurtleWindow,
@@ -34,9 +33,11 @@ def main():
     window = rg.TurtleWindow()
 
     turtle1()
+    turtle4()
     turtle3()
     turtle2()
     turtle2()
+    turtle5()
 
     window.close_on_mouse_click()
 
@@ -103,9 +104,38 @@ def turtle3():
     maja.end_fill()
 
 
+def turtle4():
+    pete = rg.SimpleTurtle()
+    pete.pen = rg.Pen('green', 10)
+
+    pete.backward(200)
+    pete.begin_fill()
+    pete.draw_regular_polygon(5,50)
+    pete.end_fill()
+
+
+def turtle5():
+    kate = rg.SimpleTurtle()
+    kate.pen = rg.Pen('orange', 10)
+
+    kate.forward(100)
+
+    kate.begin_fill()
+    kate.draw_square(50)
+    kate.end_fill()
+
+    lou = rg.SimpleTurtle()
+    lou.pen = rg.Pen('pink', 10)
+
+    lou.forward(50)
+
+    lou.begin_fill()
+    lou.draw_regular_polygon(8,50)
+    lou.end_fill()
+
 ########################################################################
 #
-# TODO: 2.
+# DONE: 2.
 #   READ the code above.  Be sure you understand:
 #     -- How many functions are defined above?
 #           (Answer: 4)
