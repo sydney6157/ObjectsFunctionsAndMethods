@@ -154,6 +154,7 @@ def lines():
     window.render()
     window.close_on_mouse_click()
 
+
     # ------------------------------------------------------------------
     # TODO: 4. Implement and test this function.
     # ------------------------------------------------------------------
