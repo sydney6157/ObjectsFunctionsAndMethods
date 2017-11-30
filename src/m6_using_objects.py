@@ -102,8 +102,6 @@ def circle_and_rectangle():
     circle1.fill_color = 'blue'
     circle1.attach_to(window)
     rect1.attach_to(window)
-    window.render()
-    window.close_on_mouse_click()
     print(circle1.outline_color)
     print(circle1.fill_color)
     print(circle1.center)
@@ -140,14 +138,14 @@ def lines():
     -- Waits for the user to press the mouse, then closes the window.
     """
     window = rg.RoseWindow()
-    start1 = rg.Point(5,50)
-    end1 = rg.Point(15,65)
-    line1 = rg.Line(start1,end1)
+    point1 = rg.Point(100, 150)
+    point2 = rg.Point(200, 50)
+    line = rg.Line(point1, point2)
+    line.attach_to(window)
     start2 = rg.Point(25, 80)
     end2 = rg.Point(40, 100)
     line2 = rg.Line(start2, end2)
-    line2.pen = rg.Pen('black',3)
-    line1.attach_to(window)
+    line2.thickness = 10
     line2.attach_to(window)
     midpoint = line2.get_midpoint()
     print(midpoint)
